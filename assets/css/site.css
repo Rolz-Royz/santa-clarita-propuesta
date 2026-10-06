@@ -163,6 +163,7 @@ body { --bar-h: 84px; }
 .hero__grid { display: grid; grid-template-columns: 1.1fr .9fr; grid-template-areas: "si card" "rail rail" "ctas ctas" "copy copy"; gap: 0 14px; padding-top: 10px; }
 .hero__si { grid-area: si; align-self: start; }
 .si { font-family: var(--f-display); font-weight: 600; font-size: clamp(9rem, 44vw, 21rem); line-height: .78; letter-spacing: -.04em; margin: 0; padding-top: .12em; font-variation-settings: "opsz" 96; }
+.si--yes { font-size: clamp(6.5rem, 30vw, 15rem); letter-spacing: -.035em; }
 .si-line { font-family: var(--f-script); font-size: clamp(2rem, 8.6vw, 4.25rem); line-height: .95; margin: .05em 0 0 .05em; display: block; }
 .hero__card { grid-area: card; align-self: start; margin-top: 22px; rotate: 2.5deg; }
 .hero__card .card { --frame: 7px; }
@@ -202,6 +203,7 @@ body { --bar-h: 84px; }
   .hero__grid { grid-template-columns: 1.15fr .85fr; grid-template-areas: "si card" "copy card" "ctas card" "rail card"; grid-template-rows: auto auto auto 1fr; gap: 0 clamp(24px, 5vw, 80px); padding-top: clamp(20px, 3vw, 40px); }
   .si { font-size: clamp(9rem, 15vw, 14rem); }
   .si-line { font-size: clamp(2.4rem, 4vw, 3.4rem); }
+  .si--yes { font-size: clamp(7rem, 11.5vw, 11rem); }
   .hero__copy { padding: 14px 0 0; }
   .hero__ctas { margin-top: 18px; }
   .hero__card { margin-top: 14px; max-width: 390px; justify-self: end; rotate: 2deg; }
@@ -390,7 +392,7 @@ body { --bar-h: 84px; }
 .faq details { border-bottom: 1px solid var(--line); }
 .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 18px; padding: 22px 0; font: 500 clamp(1.2rem, 2.6vw, 1.5rem)/1.25 var(--f-display); }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; font-family: var(--f-ui); font-weight: 300; font-size: 1.6rem; line-height: 1; color: var(--deep); transition: rotate .3s var(--ease); }
+.faq summary::after { content: ""; flex: none; width: 18px; height: 18px; margin-top: .3em; color: var(--deep); background: linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat, linear-gradient(currentColor, currentColor) center / 1.5px 100% no-repeat; transition: rotate .3s var(--ease); }
 .faq details[open] summary::after { rotate: 45deg; }
 .faq .ans { padding: 0 0 22px; color: var(--ink-soft); }
 
